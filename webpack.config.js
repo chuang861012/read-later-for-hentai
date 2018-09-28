@@ -42,7 +42,7 @@ const config = {
             {from:"./src/events.js",to:"./"}
         ]),
         new ZipPlugin({
-            filename: "readAfter.zip"
+            filename: "readlater.zip"
         })
     ]
 }

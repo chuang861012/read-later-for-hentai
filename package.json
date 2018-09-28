@@ -1,15 +1,19 @@
 {
-    "name": "readlater",
+    "name": "read-later-for-hentai",
     "version": "1.0.0",
-    "description": "",
+    "description": "A read later list for ExHentai/E-Hentai & nhentai !",
     "scripts": {
         "start": "webpack-dev-server --mode development --open",
         "build": "webpack -p --mode production",
         "watch": "webpack -p --mode production --watch",
         "lint": "eslint --ext .js --ext .jsx src"
     },
-    "author": "",
-    "license": "ISC",
+    "author": "chuang861012",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chuang861012/Read-Later-for-Hentai.git"
+    },
     "devDependencies": {
         "babel-core": "^6.26.3",
         "babel-eslint": "^10.0.0",
