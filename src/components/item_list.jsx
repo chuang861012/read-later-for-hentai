@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Navbar from "./nav_bar";
 
 export default class ItemList extends Component {
     state = {
@@ -17,7 +18,12 @@ export default class ItemList extends Component {
         chrome.storage.sync.set({ readAfter: items });
     }
 
-    renderItems({ img, link, title }) {
+    onClearButtonClick(){
+        this.setState({items:[]});
+        chrome.storage.sync.set({ readAfter: [] });
+    }
+
+    renderItems({ img, link, title }, index, arr) {
         return (
             <li className="list-item">
                 <a href={link} target="_blank" rel="noopener noreferrer" >
@@ -32,10 +38,11 @@ export default class ItemList extends Component {
                                 onClick={(e) => {
                                     e.preventDefault();
                                     this.onRemoveButtonClick(link);
-                                }}>delete</button>
+                                }}>&#x2716;</button>
                         </div>
                     </div>
                 </a>
+                {arr.length > index + 1 ? <hr /> : <noscript />}
             </li>
         );
     }
@@ -43,9 +50,7 @@ export default class ItemList extends Component {
     render() {
         return (
             <div>
-                <div>
-                    <p>{this.state.items.length} / 20</p>
-                </div>
+                <Navbar num={this.state.items.length} func={this.onClearButtonClick.bind(this)}/>
                 <ul className="item-container">
                     {this.state.items.map(this.renderItems.bind(this))}
                 </ul>

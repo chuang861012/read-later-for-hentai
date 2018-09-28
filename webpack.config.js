@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ZipPlugin = require('zip-webpack-plugin');
 
 const config = {
     entry: ['./src/index.jsx'],
@@ -39,7 +40,10 @@ const config = {
             {from:"./src/res",to:"./res"},
             {from:"./src/manifest.json",to:"./"},
             {from:"./src/events.js",to:"./"}
-        ])
+        ]),
+        new ZipPlugin({
+            filename: "readAfter.zip"
+        })
     ]
 }
 

@@ -6,9 +6,14 @@ html {
     box-sizing: border-box;
 }
 
+html{
+    overflow: auto;
+}
+
 body{
-    width:450px;
+    width:400px;
     max-height: 600px;
+    overflow: auto;
 }
 
 a,a:link,a:hover,a:visited,a:active{
@@ -27,18 +32,44 @@ a,a:link,a:hover,a:visited,a:active{
     cursor: pointer;
 }
 
-p{
-    margin-top:.3rem;
-    text-align: center;
-    font-size: 1.4rem
+.nav-container{
+    height: 3rem;
+    background-color: #888;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.list-item:not(:last-child){
-    margin-bottom: .5rem;
+.nav-text{
+    line-height: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color:#fff;
+}
+
+.nav-clear-btn{
+    border: none;
+    color:#fff;
+    background-color: transparent;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav-clear-btn:hover{
+    color:#d63031;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
 
 .item-container {
-    width:80%;
+    width:95%;
     list-style: none;
     margin: 1rem auto;
 }
@@ -56,7 +87,7 @@ p{
 }
 
 .item-img-box>img {
-    max-width: 16rem;
+    max-width: 100%;
     max-height: 100%;
 }
 
@@ -71,6 +102,34 @@ p{
     font-size: 1.5rem;
 }
 
+.item-detail-btn{
+    align-self: flex-end;
+    border: none;
+    color:#b2bec3;
+    background-color: transparent;
+}
+
 .item-detail-btn:hover{
-    background-color: #dff9fb;
+    color:#d63031;
+}
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: .8rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
