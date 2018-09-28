@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Read Later for Hentai",
+    "description": "A read later list for ExHentai/E-Hentai & nhentai !",
+    "version": "0.6.0",
+    "browser_action": {
+        "default_icon": "res/icon48.png",
+        "default_popup": "index.html"
+    },
+    "permissions": ["storage"],
+    "background": {
+        "scripts": ["events.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://exhentai.org/g/*","https://e-hentai.org/g/*"],
+            "js": ["content/cs.panda.js"]
+        },
+        {
+            "matches": ["https://nhentai.net/g/*"],
+            "js": ["content/cs.n.js"]
+        }
+    ],
+    "icons": {
+        "16": "res/icon16.PNG",
+        "48": "res/icon48.PNG",
+        "128": "res/icon128.PNG"
+    }
+}

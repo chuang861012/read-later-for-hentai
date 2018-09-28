@@ -1,0 +1,39 @@
+{
+    "name": "readlater",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "webpack-dev-server --mode development --open",
+        "build": "webpack -p --mode production",
+        "watch": "webpack -p --mode production --watch",
+        "lint": "eslint --ext .js --ext .jsx src"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-eslint": "^10.0.0",
+        "babel-loader": "^7.1.5",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "clean-webpack-plugin": "^0.1.19",
+        "copy-webpack-plugin": "^4.5.2",
+        "css-loader": "^1.0.0",
+        "eslint": "^5.6.0",
+        "eslint-plugin-react": "^7.11.1",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "html-webpack-plugin": "^3.2.0",
+        "style-loader": "^0.23.0",
+        "webpack": "^4.17.2",
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-server": "^3.1.7"
+    },
+    "dependencies": {
+        "lodash": "^4.17.10",
+        "react": "^16.5.0",
+        "react-dom": "^16.5.0",
+        "react-lazyload": "^2.3.0"
+    }
+}
