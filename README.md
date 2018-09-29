@@ -7,7 +7,7 @@ It will add a button to the manga gallery page. Press it to add the manga to thi
 - [exhentai.org](http://exhentai.org)
 - [e-hentai.org](http://e-hentai.org)
 - [nhentai.net](https://nhentai.net)
-# Install extension | 安裝擴充功能
+# Install extension
 Free download : [Chrome Web Store - Extensions](https://chrome.google.com/webstore/detail/read-later-for-hentai/bipmijeginoipfkdmhfmjcdebpijejhn)
 # License
 This extension is available under the MIT license.
