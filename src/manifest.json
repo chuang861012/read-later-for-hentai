@@ -23,8 +23,8 @@
         }
     ],
     "icons": {
-        "16": "res/icon16.PNG",
-        "48": "res/icon48.PNG",
-        "128": "res/icon128.PNG"
+        "16": "res/icon16.png",
+        "48": "res/icon48.png",
+        "128": "res/icon128.png"
     }
 }
