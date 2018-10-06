@@ -24,7 +24,7 @@ const link = location.href;
 chrome.storage.sync.get(null, function (list) {
     let readAfter = list.readAfter;
     readAfter.forEach((e) => {
-        if (e.link === link) {
+        if (e.title === title) {
             added();
             return;
         }

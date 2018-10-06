@@ -8,7 +8,7 @@ chrome.runtime.onInstalled.addListener(() => {
             text: readAfter.length > 0 ? readAfter.length.toString() : ""
         });
         chrome.browserAction.setBadgeBackgroundColor({
-            color: "red"
+            color: "#636e72"
         });
     });
 });
